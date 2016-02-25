@@ -1,6 +1,6 @@
 var isMozilla = window.mozRTCPeerConnection && !window.webkitRTCPeerConnection;
 
-window.webkitURL = window.URL;
+window.URL = window.URL;
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 window.webkitRTCPeerConnection = window.mozRTCPeerConnection;
 window.RTCSessionDescription = window.mozRTCSessionDescription;
