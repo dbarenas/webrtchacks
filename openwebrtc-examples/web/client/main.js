@@ -81,7 +81,7 @@ window.onload = function () {
     if (!localStorage.getItem("video_cb"))
         videoCheckBox.checked = true;
 
-    joinButton.disabled = !navigator.webkitGetUserMedia;
+    joinButton.disabled = !navigator.getUserMedia;
     joinButton.onclick = function (evt) {
         if (!(audioCheckBox.checked || videoCheckBox.checked || chatCheckBox.checked)) {
             alert("Choose at least audio, video or chat.");
@@ -129,7 +129,7 @@ window.onload = function () {
         // video/audio with our without chat
         if (videoCheckBox.checked || audioCheckBox.checked) {
             // get a local stream
-            navigator.webkitGetUserMedia({ "audio": audioCheckBox.checked,
+            navigator.getUserMedia({ "audio": audioCheckBox.checked,
                 "video": videoCheckBox.checked}, function (stream) {
                 // .. show it in a self-view
                 selfView.src = URL.createObjectURL(stream);
