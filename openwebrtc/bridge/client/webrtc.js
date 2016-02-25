@@ -1687,7 +1687,7 @@
                 imgDiv.__src = url;
 
                 if (renderInfo.port)
-                    imgUrl = "http://127.0.0.1:" + renderInfo.port + "/__" + tag + "-";
+                    imgUrl = "https://127.0.0.1:" + renderInfo.port + "/__" + tag + "-";
 
                 img.onload = function () {
                     if (img.oncomplete)
