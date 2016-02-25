@@ -2,9 +2,9 @@ var isMozilla = window.mozRTCPeerConnection && !window.webkitRTCPeerConnection;
 
 window.URL = window.URL;
 navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
-window.webkitRTCPeerConnection = window.mozRTCPeerConnection;
-window.RTCSessionDescription = window.mozRTCSessionDescription;
-window.RTCIceCandidate = window.mozRTCIceCandidate;
+window.webkitRTCPeerConnection = window.RTCPeerConnection;
+window.RTCSessionDescription = window.RTCSessionDescription;
+window.RTCIceCandidate = window.RTCIceCandidate;
 
 
 var selfView;
