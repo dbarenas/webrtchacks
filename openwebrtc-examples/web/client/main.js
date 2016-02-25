@@ -1,11 +1,11 @@
 var isMozilla = window.mozRTCPeerConnection && !window.webkitRTCPeerConnection;
-
+if (isMozilla) {
     window.webkitURL = window.URL;
     navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
     window.webkitRTCPeerConnection = window.mozRTCPeerConnection;
     window.RTCSessionDescription = window.mozRTCSessionDescription;
     window.RTCIceCandidate = window.mozRTCIceCandidate;
-
+}
 
 var selfView;
 var remoteView;
