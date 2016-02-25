@@ -74,8 +74,8 @@ window.onload = function () {
     audioCheckBox.checked = localStorage.getItem("audio_cb") == "true";
     videoCheckBox.checked = localStorage.getItem("video_cb") == "true";
 
-    if (webkitRTCPeerConnection.prototype.createDataChannel !== undefined)
-        chatCheckBox.checked = localStorage.getItem("chat_cb") == "true";
+    // if (webkitRTCPeerConnection.prototype.createDataChannel !== undefined)
+    //     chatCheckBox.checked = localStorage.getItem("chat_cb") == "true";
 
     // Check video box if no preferences exist
     if (!localStorage.getItem("video_cb"))
