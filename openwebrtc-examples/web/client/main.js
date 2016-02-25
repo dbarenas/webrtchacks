@@ -61,10 +61,10 @@ window.onload = function () {
     chatCheckBox = document.getElementById("chat_cb");
 
     // if browser doesn't support DataChannels the chat will be disabled.
-    if (webkitRTCPeerConnection.prototype.createDataChannel === undefined) {
-        chatCheckBox.checked = false;
-        chatCheckBox.disabled = true;
-    }
+    // if (webkitRTCPeerConnection.prototype.createDataChannel === undefined) {
+    //     chatCheckBox.checked = false;
+    //     chatCheckBox.disabled = true;
+    // }
 
     // Store media preferences
     audioCheckBox.onclick = videoCheckBox.onclick = chatCheckBox.onclick = function(evt) {
